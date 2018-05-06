@@ -18,7 +18,7 @@ def check_tweet_not_exist(tweetTitle, newsTitle):
 #         return exist
 
 def news_story_to_tweet(storyId):
-    return story["title"]+":"+"\n"+story['longUrl']
+    return story["title"]+":"+"\n"+story['longUrl'] #TODO this should be short url?
 
 #produciton:
 #public = get_tweets_all()

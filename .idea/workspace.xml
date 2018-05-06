@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f3c1457-c250-4b4a-8842-8e567ffc4a19" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsGatherer.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsGatherer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShortUrl.py" beforeDir="false" afterPath="$PROJECT_DIR$/ShortUrl.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Twitter.py" beforeDir="false" afterPath="$PROJECT_DIR$/Twitter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic.py" beforeDir="false" afterPath="$PROJECT_DIR$/logic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,11 +29,29 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Auth.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Auth.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ShortUrl.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ShortUrl.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+            <state relative-caret-position="119">
+              <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -35,8 +59,8 @@
       <file leaf-file-name="NewsGatherer.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NewsGatherer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+            <state relative-caret-position="153">
+              <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -47,17 +71,11 @@
       <file leaf-file-name="Twitter.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Twitter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="136">
+              <caret line="8" column="39" lean-forward="true" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -65,8 +83,8 @@
       <file leaf-file-name="logic.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/logic.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="629">
+              <caret line="37" column="47" lean-forward="true" selection-start-line="21" selection-end-line="37" selection-end-column="47" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -77,8 +95,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+            <state relative-caret-position="136">
+              <caret line="8" column="70" lean-forward="true" selection-start-line="8" selection-start-column="70" selection-end-line="8" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -102,18 +120,19 @@
         <option value="$PROJECT_DIR$/NewsTweeter.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/TwitterAuth.py" />
-        <option value="$PROJECT_DIR$/ShortUrl.py" />
-        <option value="$PROJECT_DIR$/NewsGatherer.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/logic.py" />
-        <option value="$PROJECT_DIR$/Twitter.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/ShortUrl.py" />
+        <option value="$PROJECT_DIR$/NewsGatherer.py" />
+        <option value="$PROJECT_DIR$/Twitter.py" />
+        <option value="$PROJECT_DIR$/Auth.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1054" />
-    <option name="width" value="1513" />
+    <option name="x" value="818" />
+    <option name="width" value="1749" />
     <option name="height" value="1407" />
   </component>
   <component name="ProjectView">
@@ -128,15 +147,6 @@
             <path>
               <item name="TwitterCreater" type="b2602c69:ProjectViewProjectNode" />
               <item name="TwitterCreater" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TwitterCreater" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="TwitterCreater" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 2.7 &gt;" type="70bed36:NamedLibraryElementNode" />
             </path>
           </expand>
           <select />
@@ -282,10 +292,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1054" y="0" width="1513" height="1407" extended-state="0" />
+    <frame x="818" y="0" width="1749" height="1407" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23112893" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19965377" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" />
@@ -329,6 +339,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -355,49 +368,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ShortUrl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NewsGatherer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="136">
+          <caret line="8" column="70" lean-forward="true" selection-start-line="8" selection-start-column="70" selection-end-line="8" selection-end-column="70" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/logic.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="629">
+          <caret line="37" column="47" lean-forward="true" selection-start-line="21" selection-end-line="37" selection-end-column="47" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Twitter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShortUrl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NewsGatherer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Twitter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="39" lean-forward="true" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Auth.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
         </state>
       </provider>
     </entry>
