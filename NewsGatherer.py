@@ -10,16 +10,21 @@ To Do:
 
 def goo_shorten_url(url): #Used to get shorter url to tweet
     post_url = 'https://www.googleapis.com/urlshortener/v1/url?key=AIzaSyB7DHtzdPLF9Pl90XFzkw_YD_sr8PI58gA'
-    payload = {'longUrl': url}
+    data = {'longUrl': url}
     headers = {'content-type': 'application/json'}
-    r = requests.post(post_url, data=json.dumps(payload), headers=headers)
-    print r.json()['id']
+    r = requests.post(post_url, data=json.dumps(data), headers=headers)
     return r.json()['id']
 
 def get_news_stories(): #TODO change url query to "tall%20ships"
-    url = 'https://newsapi.org/v2/everything?q=tall+ships&from=2018-05-04&sortBy=publishedAt&apiKey=e14cf16aa4a4403d88aac364c17810fa'
-    r = requests.get(url)
-    print r.url
+    url = 'https://newsapi.org/v2/everything'
+    data = {
+        'q' : 'tall+ships',
+        'from' : '2018-05-04', #TODO make today - 2
+        'sortBy' : 'publishedAt',
+        'apiKey' : 'e14cf16aa4a4403d88aac364c17810fa',
+        'to' : '2018-05-05' #TODO remove this
+    }
+    r = requests.get(url, data)
     return r.json()
 
 def parse_news_stories(response, story):
@@ -28,6 +33,7 @@ def parse_news_stories(response, story):
         data = { 'title': news['articles'][story]['title'], 'longUrl': news['articles'][story]['url'], 'description': news['articles'][story]['description']}
         return data
 
-
+'''
 response = get_news_stories()
-print parse_news_stories(response, 3)
+story = parse_news_stories(response, 1)
+'''
