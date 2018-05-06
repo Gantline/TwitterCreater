@@ -11,6 +11,7 @@ auth.py
 .idea/**/tasks.xml
 .idea/**/dictionaries
 .idea/**/shelf
+.idea/*
 
 # Sensitive or high-churn files
 .idea/**/dataSources/
