@@ -11,6 +11,12 @@ def check_tweet_not_exist(tweetTitle, newsTitle):
     else:
         print "not posting..."
 
+# in progerss...
+# def iterater_tmp(all_tweets_obj, news_title): #TODO this needs to go through twitter tiles to check if the news titles has already been tweeted.  return true or false
+#         for tweet_title in all_tweets_obj:
+#         exist = check_tweet_not_exist(tweet_title, newsTitle)
+#         return exist
+
 def news_story_to_tweet(storyId):
     return story["title"]+":"+"\n"+story['longUrl']
 
