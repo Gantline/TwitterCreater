@@ -7,7 +7,7 @@ def get_news_stories(): #TODO change url query to "tall%20ships"
         'q' : 'tall+ships',
         'from' : '2018-05-04', #TODO make today - 2
         'sortBy' : 'publishedAt',
-        'apiKey' : newsgathererKey
+        'apiKey' : newsgathererKey,
         'to' : '2018-05-05' #TODO remove this
     }
     r = requests.get(url, data)
