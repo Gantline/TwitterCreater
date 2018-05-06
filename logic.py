@@ -12,7 +12,7 @@ def check_tweet_not_exist(tweetTitle, newsTitle):
         print "not posting..."
 
 def news_story_to_tweet(storyId):
-    print story["title"]+":"+"\n"+story['longUrl']
+    return story["title"]+":"+"\n"+story['longUrl']
 
 #produciton:
 #public = get_tweets_all()
@@ -29,4 +29,4 @@ newsTitle = NewsGatherer.parse_news_title(story)
 
 check_tweet_not_exist(tweet_title, newsTitle)
 print "----"
-news_story_to_tweet(0)
+print "Text to tweet:\n"+news_story_to_tweet(0)

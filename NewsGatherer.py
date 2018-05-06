@@ -1,13 +1,6 @@
 import requests
 import json
 
-'''
-This is to get new articles.
-To Do:
-1. Tweet message
-2. Check to see if I have already tweeted this article
-3. Perhaps tweet out an image, if Image Url is not null?'''
-
 def get_news_stories(): #TODO change url query to "tall%20ships"
     url = 'https://newsapi.org/v2/everything'
     data = {
