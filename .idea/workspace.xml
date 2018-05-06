@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7f3c1457-c250-4b4a-8842-8e567ffc4a19" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/NewsGatherer.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsGatherer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShortUrl.py" beforeDir="false" afterPath="$PROJECT_DIR$/ShortUrl.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -56,8 +55,8 @@
       <file leaf-file-name="NewsGatherer.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NewsGatherer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+            <state relative-caret-position="493">
+              <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -122,8 +121,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/Twitter.py" />
         <option value="$PROJECT_DIR$/Auth.py" />
-        <option value="$PROJECT_DIR$/NewsGatherer.py" />
         <option value="$PROJECT_DIR$/ShortUrl.py" />
+        <option value="$PROJECT_DIR$/NewsGatherer.py" />
       </list>
     </option>
   </component>
@@ -416,8 +415,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NewsGatherer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+        <state relative-caret-position="493">
+          <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
