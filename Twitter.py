@@ -19,7 +19,7 @@ def process_twitter_title(tweet,i):
     title = tweet[i].rsplit(":",2)[0]
     return title
 
-def tweet(storyId):
+def tweet(storyId): #todo add try logic
     status = news_story_to_tweet(storyId)
     print "tweeting...: "+status
     #api.update_status(status) #todo Make this live
