@@ -1,6 +1,7 @@
 import requests
 from Auth import newsgathererKey
 
+#get_news_stories should be used once and saved to an object to reduce the number of calls to the api
 def get_news_stories(): #TODO change url query to "tall%20ships"
     url = 'https://newsapi.org/v2/everything'
     data = {
@@ -8,16 +9,17 @@ def get_news_stories(): #TODO change url query to "tall%20ships"
         'from' : '2018-05-04', #TODO make today - 2
         'sortBy' : 'publishedAt',
         'apiKey' : newsgathererKey,
-        'to' : '2018-05-05' #TODO remove this
+        'to' : '2018-05-05' #TODO remove this or make today
     }
     r = requests.get(url, data)
     return r.json()
 
-def parse_news_stories(response, story):
+#currently parse_news_stories is given the saved responce form get_news_stories and an id.
+# It returns a single story.  I may want it to return the array of stories?
+def parse_news_stories(response, story): #Takes json responce from get_news_stories() and a int of which story you would like
     news = response
-    for articles in news: #TODO this doesnt need to be in a loop.  I am just pulling it out.
-        data = { 'title': news['articles'][story]['title'], 'longUrl': news['articles'][story]['url'], 'description': news['articles'][story]['description']}
-        return data
+    data = { 'title': news['articles'][story]['title'], 'longUrl': news['articles'][story]['url'], 'description': news['articles'][story]['description']}
+    return data
 
 def parse_news_title(story):
     newsTitle = story['title']
