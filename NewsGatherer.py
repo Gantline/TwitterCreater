@@ -18,6 +18,8 @@ def get_news_stories(): #TODO change url query to "tall%20ships"
 # It returns a single story.  I may want it to return the array of stories?
 def parse_news_stories(response, story): #Takes json responce from get_news_stories() and a int of which story you would like
     news = response
+    if news['totalResults'] == 0: #TODO test this
+        return None
     data = { 'title': news['articles'][story]['title'], 'longUrl': news['articles'][story]['url'], 'description': news['articles'][story]['description']}
     return data
 

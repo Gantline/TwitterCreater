@@ -13,10 +13,11 @@ def parse_tweets_all(public_tweets): #make array of existing tweets's text #todo
     tweets = []
     print(public_tweets.text)
     for tweet in public_tweets:
-        tweets.append(tweet.text)
+        title = tweet.text.rsplit(":", 2)[0] #TODO test this
+        tweets.append(title)
     return tweets
 
-def process_twitter_title(tweet,i): #give tweets array and number, return title
+def process_twitter_title(tweet,i): #give tweets array and number, return title #TODO remove function if not using hardcoded alltweets
     title = tweet[i].rsplit(":",2)[0]
     return title
 

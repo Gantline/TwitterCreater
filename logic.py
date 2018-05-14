@@ -35,16 +35,16 @@ def news_story_to_tweet(storyId): #format final tweet to be sent to twitter
 #produciton:
 #public = get_tweets_all()
 #all_tweets = parse_tweets_all(public)
-all_tweets = [u'OPPO A83 (2018) Mid-Ranger Now Expanding Beyond India:\nhttps://t.co/cB2wiEv366', u'An Incredible, One-of-a-Kind Expanding Tiny House \u2014 House Tour Greatest Hits:\nhttps://t.co/O9U2aSAysQ']
+#all_tweets = [u'OPPO A83 (2018) Mid-Ranger Now Expanding Beyond India:\nhttps://t.co/cB2wiEv366', u'An Incredible, One-of-a-Kind Expanding Tiny House \u2014 House Tour Greatest Hits:\nhttps://t.co/O9U2aSAysQ']
 
 #get single tweet
-tweet_title = Twitter.process_twitter_title(all_tweets,1)
-
-#get single news story
-NewsResponse = NewsGatherer.get_news_stories()
-story = NewsGatherer.parse_news_stories(NewsResponse, 0)
-newsTitle = NewsGatherer.parse_news_title(story)
-
-check_tweet_not_exist(tweet_title, newsTitle)
-print "----"
-print "Text to tweet:\n"+news_story_to_tweet(0)
+# tweet_title = Twitter.process_twitter_title(all_tweets,1)
+#
+# #get single news story
+# NewsResponse = NewsGatherer.get_news_stories()
+# story = NewsGatherer.parse_news_stories(NewsResponse, 0)
+# newsTitle = NewsGatherer.parse_news_title(story)
+#
+# check_tweet_not_exist(tweet_title, newsTitle)
+# print "----"
+# print "Text to tweet:\n"+news_story_to_tweet(0)
