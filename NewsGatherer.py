@@ -1,16 +1,17 @@
 import requests
 from Auth import newsgathererKey
+from datetime import date
+
 
 #get_news_stories should be used once and saved to an object to reduce the number of calls to the api
 def get_news_stories(): #TODO change url query to "tall%20ships"
     url = 'https://newsapi.org/v2/everything'
     data = {
-        'q' : 'tall+ships',
-        'from' : '2018-05-04', #TODO make today - 2
+        'q' : 'tall%20ships',
+        'from' :  str(date.today()), #TODO make today - 2
         'sortBy' : 'publishedAt',
         'apiKey' : newsgathererKey,
-        'to' : '2018-05-05' #TODO remove this or make today
-    }
+        }
     r = requests.get(url, data)
     return r.json()
 
@@ -27,9 +28,6 @@ def parse_news_title(story):
     newsTitle = story['title']
     return newsTitle
 
-#  Testing
-# response = get_news_stories()
-# story = parse_news_stories(response, 1)
-# print story
-# print parse_news_title(story)
-#
+def parse_news_url(story):
+    newsUrl = story['longUrl']
+    return newsUrl

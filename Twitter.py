@@ -21,8 +21,12 @@ def process_twitter_title(tweet,i): #give tweets array and number, return title 
     title = tweet[i].rsplit(":",2)[0]
     return title
 
-def tweet(storyId): #todo add try logic
-    status = news_story_to_tweet(storyId)
-    print "DEBUG (NOT LIVE) tweeting...: "+status
+def news_story_to_tweet(storyTitle, storyUrl): #format final tweet to be sent to twitter
+    return storyTitle+":"+"\n"+storyUrl #TODO this should be short url
+
+def tweet(storyTitle, storyUrl): #todo add try logic
+    status = news_story_to_tweet(storyTitle,storyUrl)
+    print "DEBUG (NOT LIVE) tweeting...: "
+    print(status)
     #api.update_status(status) #todo Make this live
     return

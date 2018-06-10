@@ -15,8 +15,8 @@ I will then post that news story with a shortened url
 
 # -get news stories that fit query
 newsResponse = NewsGatherer.get_news_stories()
-
-if newsResponse is not None:
+print(newsResponse)
+if newsResponse['status'] == 'ok' and newsResponse['totalResults'] > 0:
     #publicTweets = Twitter.get_tweets_all()
     #tweets = Twitter.parse_tweets_all(publicTweets)
 
@@ -27,7 +27,6 @@ if newsResponse is not None:
     i = 0
     for tweet in allTweets:
         tweetTitles.append(Twitter.process_twitter_title(allTweets, i))
-        print tweetTitles[i]
         i = i + 1
     #end of twitter bypass
 
@@ -35,19 +34,15 @@ if newsResponse is not None:
         #TODO make sure there actually are 3 stories.  All we know so far is there were more than None
         story = NewsGatherer.parse_news_stories(newsResponse, storyId)
         storyTitle = NewsGatherer.parse_news_title(story)
+        storyUrl = NewsGatherer.parse_news_url(story)
         alreadyPosted = False
         i = 0
         while not alreadyPosted and i < len(tweetTitles):
             if storyTitle != tweetTitles[i]:
-                i++
+                i = i + 1
             else:
                 alreadyPosted = True
         if not alreadyPosted:
-            #TODO call url shortenener, pass to final tweet
-            #for now the tweet function only takes storyId as an argument?
-            #also tweet function has an empty return
-
-            #move news_story_to_tweet from logic to Twitter?
-            #or change tweet function to accept storyId and title as arguments?
-
-            #Twitter.tweet(storyId)
+            #tweet function has an empty return
+            shortUrl = ShortUrl.goo_shorten_url(storyUrl)
+            Twitter.tweet(storyTitle, shortUrl)
