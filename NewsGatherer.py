@@ -7,11 +7,12 @@ import datetime
 def get_news_stories(): #TODO change url query to "tall%20ships"
     url = 'https://newsapi.org/v2/everything'
     data = {
-        'q' : 'tall ships',
+        'q' : 'tall%20ships',
         'from' :  str(datetime.date.today() - datetime.timedelta(days=1)), #TODO make today - 2
         'sortBy' : 'publishedAt',
         'apiKey' : newsgathererKey,
-        }
+        'to': str(datetime.date.today() - datetime.timedelta(days=1)),  # TODO make today - 2
+    }
     r = requests.get(url, data)
     return r.json()
 

@@ -29,5 +29,6 @@ def tweet(storyTitle, storyUrl): #todo add try logic
         print "DEBUG (NOT LIVE) tweeting...: "
         print(status)
     else:
+        print('>>Attempting to tweet: '+ str(status))
         api.update_status(status)
     return api.get_status

@@ -1,6 +1,5 @@
 import NewsGatherer
 import Twitter
-import ShortUrl
 import Debugging
 
 # TODO :
@@ -20,7 +19,7 @@ if newsResponse['status'] == 'ok' and newsResponse['totalResults'] > 0:
             i = i + 1
     else:  # get tweets from twitter
         publicTweets = Twitter.get_tweets_all()
-        tweetTitles.append(Twitter.parse_tweets_all(publicTweets))
+        tweetTitles= (Twitter.parse_tweets_all(publicTweets))
     for storyId in range(3):  # checks first 3 story titles against all tweets to see if story has been posted before
         # TODO make sure there actually are 3 stories.  All we know so far is there were more than None
         story = NewsGatherer.parse_news_stories(newsResponse, storyId)
@@ -28,17 +27,13 @@ if newsResponse['status'] == 'ok' and newsResponse['totalResults'] > 0:
         storyUrl = NewsGatherer.parse_news_url(story)
         alreadyPosted = False
         i = 0
-        #TODO TESTING HERE
-        print(storyTitle)
-        print(tweetTitles)
-        print(tweetTitles[0])
-        #end testing
         while not alreadyPosted and i < len(tweetTitles):
             if storyTitle != tweetTitles[i]:
                 i = i + 1
             else:
                 alreadyPosted = True
+                print('>>News Story already tweeted: ' + str(storyTitle))
         if not alreadyPosted:
             # todo tweet function has an empty return
-            shortUrl = ShortUrl.goo_shorten_url(storyUrl) #TODO uh.... this is not working
-            Twitter.tweet(storyTitle, shortUrl)
+#            shortUrl = ShortUrl.goo_shorten_url(storyUrl) #TODO uh.... this is not working
+            Twitter.tweet(storyTitle, storyUrl)
