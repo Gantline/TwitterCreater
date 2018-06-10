@@ -23,7 +23,7 @@ def process_twitter_title(tweet,i): #give tweets array and number, return title 
     return title
 
 def news_story_to_tweet(storyTitle, storyUrl): #format final tweet to be sent to twitter
-    return storyTitle+":"+"\n"+storyUrl #TODO this should be short url
+    return storyTitle+":"+"\n"+storyUrl
 
 def tweet(storyTitle, storyUrl): #todo add try logic
     status = news_story_to_tweet(storyTitle, storyUrl)
