@@ -12,13 +12,15 @@ I will then post that news story with a shortened url
 #2. generate new auth toeksn and put in seperate file and make private
 
 
+
 # -get news stories that fit query
 newsResponse = NewsGatherer.get_news_stories()
-story = NewsGatherer.parse_news_stories(newsResponse, 0)
+
 if newsResponse is not None:
     #publicTweets = Twitter.get_tweets_all()
     #tweets = Twitter.parse_tweets_all(publicTweets)
 
+    #beginning of twitter bypass
     allTweets = [u'OPPO A83 (2018) Mid-Ranger Now Expanding Beyond India:\nhttps://t.co/cB2wiEv366',
                   u'An Incredible, One-of-a-Kind Expanding Tiny House \u2014 House Tour Greatest Hits:\nhttps://t.co/O9U2aSAysQ']
     tweetTitles = []
@@ -27,26 +29,25 @@ if newsResponse is not None:
         tweetTitles.append(Twitter.process_twitter_title(allTweets, i))
         print tweetTitles[i]
         i = i + 1
+    #end of twitter bypass
 
+    for storyId in range(3): #checks first 3 story titles against all tweets to see if story has been posted before
+        #TODO make sure there actually are 3 stories.  All we know so far is there were more than None
+        story = NewsGatherer.parse_news_stories(newsResponse, storyId)
+        storyTitle = NewsGatherer.parse_news_title(story)
+        alreadyPosted = False
+        i = 0
+        while not alreadyPosted and i < len(tweetTitles):
+            if storyTitle != tweetTitles[i]:
+                i++
+            else:
+                alreadyPosted = True
+        if not alreadyPosted:
+            #TODO call url shortenener, pass to final tweet
+            #for now the tweet function only takes storyId as an argument?
+            #also tweet function has an empty return
 
+            #move news_story_to_tweet from logic to Twitter?
+            #or change tweet function to accept storyId and title as arguments?
 
-
-#
-# -get tweets
-# -parse tweets and return an array of titles
-#
-#
-# -for story in most recent 3:
-# 	-if empty, break
-# 	-parse story title, etc.
-# 	-set already_posted = false
-# 	-while ! already_posted && i < length of tweet array:
-# 		-if story title != tweets[i]
-# 			i++
-# 		-else set already_posted = true
-# 	-if ! already_posted:
-# 		-call url shortener
-# 		-tweet story title & url
-
-#   allTweets = [u'OPPO A83 (2018) Mid-Ranger Now Expanding Beyond India:\nhttps://t.co/cB2wiEv366',
- #                 u'An Incredible, One-of-a-Kind Expanding Tiny House \u2014 House Tour Greatest Hits:\nhttps://t.co/O9U2aSAysQ']
+            #Twitter.tweet(storyId)
