@@ -1,4 +1,5 @@
 # TwitterCreater
-Uses Google News RSS feed to perform a search for a specific string.
 
-Uses result of search to tweet an news article.
+Uses a news api to perform a search for relivant news items.
+Will check if I have recently tweeted new item.
+Will tweet it with shortened url to new story.
