@@ -1,44 +1,25 @@
 import NewsGatherer
 import Twitter
 import ShortUrl
-
-'''
-I think I will get the top news stories, where the title != my latest tweet (s).
-I will then post that news story with a shortened url
-'''
-
+import Debugging
 
 # TODO :
 # todo: place in prod twitter auth token
-
-def debugging_flag():
-    debugging_flag = 0
-    if debugging_flag == 1:
-        return True
-    else:
-        return False
-
-#testing:
-print(Twitter.get_tweets_all())
-
-#/testing
-
+#TODO fix short url
 
 
 # -get news stories that fit query
 newsResponse = NewsGatherer.get_news_stories()
 if newsResponse['status'] == 'ok' and newsResponse['totalResults'] > 0:
     tweetTitles = []
-    if debugging_flag() == True:  # bypass call to twitter
-        allTweets = [u'OPPO A83 (2018) Mid-Ranger Now Expanding Beyond India:\nhttps://t.co/cB2wiEv366',
-                     u'An Incredible, One-of-a-Kind Expanding Tiny House \u2014 House Tour Greatest Hits:\nhttps://t.co/O9U2aSAysQ']
+    if Debugging.debugging_flag() == True:  # bypass call to twitter
+        allTweets = [u'OPPO A83 (2018) Mid-Ranger Now Expanding Beyond India:\nhttps://t.co/cB2wiEv366',u'An Incredible, One-of-a-Kind Expanding Tiny House \u2014 House Tour Greatest Hits:\nhttps://t.co/O9U2aSAysQ']
         i = 0
         for tweet in allTweets:
             tweetTitles.append(Twitter.process_twitter_title(allTweets, i))
             i = i + 1
     else:  # get tweets from twitter
         publicTweets = Twitter.get_tweets_all()
-        print('publicTweets: ' + publicTweets)
         tweetTitles.append(Twitter.parse_tweets_all(publicTweets))
     for storyId in range(3):  # checks first 3 story titles against all tweets to see if story has been posted before
         # TODO make sure there actually are 3 stories.  All we know so far is there were more than None
@@ -47,6 +28,11 @@ if newsResponse['status'] == 'ok' and newsResponse['totalResults'] > 0:
         storyUrl = NewsGatherer.parse_news_url(story)
         alreadyPosted = False
         i = 0
+        #TODO TESTING HERE
+        print(storyTitle)
+        print(tweetTitles)
+        print(tweetTitles[0])
+        #end testing
         while not alreadyPosted and i < len(tweetTitles):
             if storyTitle != tweetTitles[i]:
                 i = i + 1
@@ -54,5 +40,5 @@ if newsResponse['status'] == 'ok' and newsResponse['totalResults'] > 0:
                 alreadyPosted = True
         if not alreadyPosted:
             # todo tweet function has an empty return
-            shortUrl = ShortUrl.goo_shorten_url(storyUrl)
+            shortUrl = ShortUrl.goo_shorten_url(storyUrl) #TODO uh.... this is not working
             Twitter.tweet(storyTitle, shortUrl)

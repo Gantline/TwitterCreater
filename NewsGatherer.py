@@ -1,22 +1,20 @@
 import requests
 from Auth import newsgathererKey
-from datetime import date
+import datetime
 
 
 #get_news_stories should be used once and saved to an object to reduce the number of calls to the api
 def get_news_stories(): #TODO change url query to "tall%20ships"
     url = 'https://newsapi.org/v2/everything'
     data = {
-        'q' : 'tall%20ships',
-        'from' :  str(date.today()), #TODO make today - 2
+        'q' : 'tall ships',
+        'from' :  str(datetime.date.today() - datetime.timedelta(days=1)), #TODO make today - 2
         'sortBy' : 'publishedAt',
         'apiKey' : newsgathererKey,
         }
     r = requests.get(url, data)
     return r.json()
 
-#currently parse_news_stories is given the saved responce form get_news_stories and an id.
-# It returns a single story.  I may want it to return the array of stories?
 def parse_news_stories(response, story): #Takes json responce from get_news_stories() and a int of which story you would like
     news = response
     if news['totalResults'] == 0: #TODO test this

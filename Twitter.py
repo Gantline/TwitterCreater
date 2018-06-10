@@ -1,7 +1,6 @@
 import tweepy
 from Auth import twitterAccessSecret,twitterAccessToken,twitterKey,twitterSecret
-from main import debugging_flag
-
+import Debugging
 auth = tweepy.OAuthHandler(twitterKey, twitterSecret)
 auth.set_access_token(twitterAccessToken, twitterAccessSecret)
 api = tweepy.API(auth)
@@ -12,7 +11,6 @@ def get_tweets_all(): #todo limit number of tweets to something reseanble
 
 def parse_tweets_all(public_tweets): #make array of existing tweets's text #todo dont get all existing tweets
     tweets = []
-    print(public_tweets.text)
     for tweet in public_tweets:
         title = tweet.text.rsplit(":", 2)[0] #TODO test this
         tweets.append(title)
@@ -27,7 +25,7 @@ def news_story_to_tweet(storyTitle, storyUrl): #format final tweet to be sent to
 
 def tweet(storyTitle, storyUrl): #todo add try logic
     status = news_story_to_tweet(storyTitle, storyUrl)
-    if debugging_flag() == True:
+    if Debugging.debugging_flag() == True:
         print "DEBUG (NOT LIVE) tweeting...: "
         print(status)
     else:
