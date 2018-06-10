@@ -1,5 +1,6 @@
 import tweepy
 from Auth import twitterAccessSecret,twitterAccessToken,twitterKey,twitterSecret
+from main import debugging_flag
 
 auth = tweepy.OAuthHandler(twitterKey, twitterSecret)
 auth.set_access_token(twitterAccessToken, twitterAccessSecret)
@@ -25,8 +26,10 @@ def news_story_to_tweet(storyTitle, storyUrl): #format final tweet to be sent to
     return storyTitle+":"+"\n"+storyUrl #TODO this should be short url
 
 def tweet(storyTitle, storyUrl): #todo add try logic
-    status = news_story_to_tweet(storyTitle,storyUrl)
-    print "DEBUG (NOT LIVE) tweeting...: "
-    print(status)
-    #api.update_status(status) #todo Make this live
-    return
+    status = news_story_to_tweet(storyTitle, storyUrl)
+    if debugging_flag() == True:
+        print "DEBUG (NOT LIVE) tweeting...: "
+        print(status)
+    else:
+        api.update_status(status)
+    return api.get_status
